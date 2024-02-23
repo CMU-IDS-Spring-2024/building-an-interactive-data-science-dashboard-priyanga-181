@@ -22,12 +22,76 @@ df.dropna(subset = ['race'], inplace=True)  #get rid of nulls
 df['sex'] = df['sex'].str.replace('M','Male')
 df['sex'] = df['sex'].str.replace('F','Female')
 
+
 st.subheader("Filters")
+
+year_range = st.slider(
+    "Select Year Range",
+    int(df['case_year'].min()),
+    int(df['case_year'].max()),
+    (int(df['case_year'].min()), int(df['case_year'].max()))
+)
+
+select_drugs = st.multiselect(
+    "Select Primary Drug(s)",
+    options=df['combined_od1'].unique()
+)
+
+sep_df = df[(df['case_year'] >= year_range[0]) & (df['case_year'] <= year_range[1])]
+if select_drugs:
+    filtered_df = sep_df[sep_df['combined_od1'].isin(select_drugs)]
+
+
 
 #insert filters here
 
 st.subheader("Visualizations")
 
-#insert visualizations here
+yr_hist = alt.Chart(sep_df).mark_bar().encode(
+    alt.X('case_year:O', title='Year'),
+    alt.Y('count()', title='Count of Fatal Overdoses')
+).properties(
+    title='Year',
+    width=700,
+    height=300
+)
 
+age_chart = alt.Chart(sep_df).transform_bin(
+    ["bin_max", "bin_min"], field="age", bin=alt.Bin(maxbins=100)
+).mark_area(
+    interpolate='step'
+).encode(
+    x=alt.X('bin_min:Q', bin='binned', title='Age'),
+    y=alt.Y('count()', title='Count of Fatal Overdoses'),
+    tooltip=[alt.Tooltip('bin_min:Q', title='Age'), alt.Tooltip('count()', title='Count')]
+).properties(
+    title='Age',
+    width=300,
+    height=200
+)
+
+identity_chart = alt.Chart(sep_df).mark_bar().encode(
+    x=alt.X('sex:N', title='Gender'),
+    y=alt.Y('count()', title='Count of Fatal Overdoses'),
+    tooltip=[alt.Tooltip('sex:N', title='Gender'), alt.Tooltip('count()', title='Count')]
+).properties(
+    title='Gender',
+    width=300,
+    height=200
+)
+
+country_chart = alt.Chart(sep_df).mark_bar().encode(
+    x=alt.X('race:N', title='Race'),
+    y=alt.Y('count()', title='Count of Fatal Overdoses'),
+    tooltip=[alt.Tooltip('race:N', title='Race'), alt.Tooltip('count()', title='Count')]
+).properties(
+    title='Race',
+    width=300,
+    height=200
+)
+
+st.altair_chart(yr_hist)
+st.altair_chart(age_chart)
+st.altair_chart(identity_chart)
+st.altair_chart(country_chart)
 
