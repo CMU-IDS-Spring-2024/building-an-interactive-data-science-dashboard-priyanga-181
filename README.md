@@ -27,4 +27,18 @@ It's intriguing to observe the demographic patterns that emerge from the data. T
 
 4. Are there any other features you wish were present in your dashboard to either make discovery easier or to explore alternative aspects of the dataset?
 I'd appreciate additional features to deepen my analysis. Interactive trend lines showing changes over time within selected demographic filters would make temporal trends more discernible. A feature to compare data points across different demographics side by side would be insightful, especially to explore correlations or causations. Breakdowns of overdoses by socioeconomic status, geographical location, and education level would add layers of context to the demographic data. 
-   
+
+Assignment 3b
+1. Did you notice any interesting patterns or trends in the dataset?
+I've observed a noticeable trend where certain substances, such as Fentanyl and Heroin, show a marked increase in overdose incidents over the years. This could reflect a surge in opioid abuse, which aligns with national trends. Additionally, periods of pronounced peaks suggest possible influxes of drug supply or increased potency. Alarmingly, the data reveals a consistent presence of alcohol in overdose cases, underscoring its significant role alongside opioids in substance-related fatalities. These patterns underscore the critical need for targeted public health interventions and education on the risks of polydrug use.
+
+
+2. Was it possible to understand how the dataset was different in the earlier years versus the more recent years? 
+If so, what were some differences?  
+If not, how would you suggest changing the dashboard to make differences easier to find?
+
+Yes. the visualizations suggest that in the earlier years, there might have been a lower frequency of overdoses for certain drugs, while recent years show an increase, particularly with opioids like Fentanyl and Heroin. But we could also include a time series trend line or a feature to compare two specific years to understand how exactly the data changed.
+
+3. Are there any other features you wish were present in your dashboard to either make discovery easier or to explore alternative aspects of the dataset?
+I would be interested in incorporating several additional features to enhance the data exploration experience. We could integrate a geographic heat map to visualize the distribution and concentration of overdoses within different regions of Allegheny County. A correlation matrix could also be useful to explore potential relationships between different drugs. We could also use a ML model to predict the trends in future based on the current dataset and post that as a visualization.
+
