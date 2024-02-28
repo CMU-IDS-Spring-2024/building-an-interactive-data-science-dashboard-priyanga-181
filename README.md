@@ -30,10 +30,11 @@ I'd appreciate additional features to deepen my analysis. Interactive trend line
 
 Assignment 3b
 1. Did you notice any interesting patterns or trends in the dataset?
+
 I've observed a noticeable trend where certain substances, such as Fentanyl and Heroin, show a marked increase in overdose incidents over the years. This could reflect a surge in opioid abuse, which aligns with national trends. Additionally, periods of pronounced peaks suggest possible influxes of drug supply or increased potency. Alarmingly, the data reveals a consistent presence of alcohol in overdose cases, underscoring its significant role alongside opioids in substance-related fatalities. These patterns underscore the critical need for targeted public health interventions and education on the risks of polydrug use.
 
 
-2. Was it possible to understand how the dataset was different in the earlier years versus the more recent years? 
+3. Was it possible to understand how the dataset was different in the earlier years versus the more recent years? 
 If so, what were some differences?  
 If not, how would you suggest changing the dashboard to make differences easier to find?
 
