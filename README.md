@@ -41,5 +41,6 @@ If not, how would you suggest changing the dashboard to make differences easier 
 Yes. the visualizations suggest that in the earlier years, there might have been a lower frequency of overdoses for certain drugs, while recent years show an increase, particularly with opioids like Fentanyl and Heroin. But we could also include a time series trend line or a feature to compare two specific years to understand how exactly the data changed.
 
 3. Are there any other features you wish were present in your dashboard to either make discovery easier or to explore alternative aspects of the dataset?
+
 I would be interested in incorporating several additional features to enhance the data exploration experience. We could integrate a geographic heat map to visualize the distribution and concentration of overdoses within different regions of Allegheny County. A correlation matrix could also be useful to explore potential relationships between different drugs. We could also use a ML model to predict the trends in future based on the current dataset and post that as a visualization.
 
