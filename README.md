@@ -44,3 +44,15 @@ Yes. the visualizations suggest that in the earlier years, there might have been
 
 I would be interested in incorporating several additional features to enhance the data exploration experience. We could integrate a geographic heat map to visualize the distribution and concentration of overdoses within different regions of Allegheny County. A correlation matrix could also be useful to explore potential relationships between different drugs. We could also use a ML model to predict the trends in future based on the current dataset and post that as a visualization.
 
+Assignment 3C
+1. Did you notice any interesting patterns or trends in the dataset?
+I could see a high concentration of overdose incidents in and around the central Pittsburgh area, pointing to an urban epicenter in overdose cases. Surrounding areas show scattered incidents, with some suburban or rural zones experiencing significantly fewer cases. This pattern could reflect various underlying factors such as population density, socio-economic conditions, or access to healthcare services.
+
+2. Was it possible to understand how the dataset was different in the earlier years versus the more recent years? 
+If so, what were some differences?  
+If not, how would you suggest changing the dashboard to make differences easier to find?
+It is possible to understand how the differences are in earlier and recent years using the Range slider. I could see how it changes in the geographic distribution of cases. I could notice a shift in the concentration of cases, perhaps showing a spread to suburban or rural areas from urban centers over time.
+
+3. Are there any other features you wish were present in your dashboard to either make discovery easier or to explore alternative aspects of the dataset?
+For enhanced discovery, I'd suggest adding a time-lapse animation feature to visualize trends without manual slider adjustments. Also, incorporating filters for demographic data, if available, could reveal correlations with age, gender, or socio-economic status. Lastly, a feature to overlay additional data, like locations of treatment centers, could provide context for potential intervention strategies.
+
